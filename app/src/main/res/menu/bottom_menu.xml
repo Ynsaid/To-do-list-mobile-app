@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/nav_completed"
+        android:icon="@drawable/ic_completed"
+        android:title="Completed"
+        app:cnb_iconColor="@color/completed"/>
+    <item
+        android:id="@+id/nav_pending"
+        android:icon="@drawable/ic_pending"
+        android:title="Pending"
+        app:cnb_iconColor="@color/pending"/>
+
+    <item
+        android:id="@+id/nav_overdue"
+        android:icon="@drawable/time"
+        android:title="Overdue"
+        app:cnb_iconColor="@color/overdue"/>
+
+</menu>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvAddNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Note"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <EditText
+
+        android:id="@+id/etTitle"
+        android:layout_marginVertical="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAddNote"
+        android:layout_width="match_parent"
+        android:background="@drawable/edit_text_bg"
+        android:layout_height="60dp"
+        android:padding="19dp"
+        android:hint="Title"/>
+
+    <EditText
+    android:id="@+id/etDescription"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/etTitle"
+    android:layout_width="match_parent"
+    android:background="@drawable/edit_text_bg"
+    android:layout_height="200dp"
+    android:layout_marginVertical="20dp"
+    android:gravity="top|start"
+    android:padding="19dp"
+    android:hint="Description"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPickDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDescription"
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/green"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginVertical="20dp"
+        android:text="Pick Deadline"/>
+
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPickDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Date Selected"
+        android:gravity="center"
+
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        android:padding="8dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/red"
+        android:background="#00000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnConfirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConfirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_bold"
+        android:background="@drawable/confirm_btn_bg"
+        app:layout_constraintStart_toEndOf="@id/btnCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
